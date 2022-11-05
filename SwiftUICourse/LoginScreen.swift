@@ -44,6 +44,7 @@ struct LoginScreen: View {
         .edgesIgnoringSafeArea(.all)
     }
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         LoginScreen()
