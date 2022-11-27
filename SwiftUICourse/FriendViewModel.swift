@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FriendViewModel {
+struct FriendViewModel: Identifiable {
     let id: Int
     let avatar: Image
     let name: String

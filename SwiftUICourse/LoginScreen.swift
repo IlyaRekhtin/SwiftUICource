@@ -9,6 +9,8 @@ import SwiftUI
 struct LoginScreen: View {
     @State private var login = ""
     @State private var password = ""
+    @Binding var logIn: Bool
+    @State private var showAlertIncorrectValidate = false
     
     var body: some View {
             ZStack {
@@ -30,9 +32,9 @@ struct LoginScreen: View {
                         .padding([.leading, .trailing])
                         .padding(.bottom, 20)
                     Button {
-                        print("login")
+                        verifyLogIn()
                     } label: {
-                        Text("LogIn")
+                        Text("Log in")
                             .font(.title)
                         Image(systemName: "chevron.right")
                             .font(.title)
@@ -42,13 +44,29 @@ struct LoginScreen: View {
                 }
             }
         .edgesIgnoringSafeArea(.all)
+        .alert(isPresented: $showAlertIncorrectValidate) {
+            Alert(title: Text("Ошибка!"), message: Text("Не правильный логин или пароль"))
+        }
+        
+    }
+    
+    private func verifyLogIn() {
+        if self.login == "1" && self.password == "1" {
+            //auth
+            logIn = true
+        } else {
+            self.showAlertIncorrectValidate = true
+        }
+        self.password = ""
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginScreen()
-            .previewDevice("iPhone 12")
-            .previewInterfaceOrientation(.portrait)
-    }
-}
+
+
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginScreen(logIn: )
+//            .previewDevice("iPhone 12")
+//            .previewInterfaceOrientation(.portrait)
+//    }
+//}
