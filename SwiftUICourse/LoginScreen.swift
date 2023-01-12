@@ -50,6 +50,8 @@ struct LoginScreen: View {
         
     }
     
+    
+    /// Авторизация
     private func verifyLogIn() {
         if self.login == "1" && self.password == "1" {
             //auth
@@ -60,13 +62,3 @@ struct LoginScreen: View {
         self.password = ""
     }
 }
-
-
-
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LoginScreen(logIn: )
-//            .previewDevice("iPhone 12")
-//            .previewInterfaceOrientation(.portrait)
-//    }
-//}

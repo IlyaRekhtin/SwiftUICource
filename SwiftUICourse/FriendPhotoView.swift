@@ -26,8 +26,3 @@ struct FriendPhotoView: View {
     }
 }
 
-struct FriendPhotoView_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendPhotoView()
-    }
-}
