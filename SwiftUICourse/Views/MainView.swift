@@ -12,17 +12,20 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
-            HStack{
-                LoginScreen(logIn: $shouldShowMainView)
-                NavigationLink(destination: TabBarView(), isActive: $shouldShowMainView) {}
+            VStack {
+                HStack{
+                    LoginScreen(logIn: $shouldShowMainView)
+//                    VKLoginWebView(logIn: $shouldShowMainView)
+                    NavigationLink(destination: TabBarView(), isActive: $shouldShowMainView) {}
+                }
             }
         }
     }
 }
 
+
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-            .previewDevice("iPhone 12")
     }
 }

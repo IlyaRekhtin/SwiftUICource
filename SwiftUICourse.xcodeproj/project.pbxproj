@@ -19,6 +19,11 @@
 		8CA8515429170A4F0058EEB2 /* ListRowMaket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8515329170A4F0058EEB2 /* ListRowMaket.swift */; };
 		8CA8515629170D530058EEB2 /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8515529170D530058EEB2 /* FriendViewModel.swift */; };
 		8CA85160291AF82A0058EEB2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8515F291AF82A0058EEB2 /* MainView.swift */; };
+		8CE37B812971F11900E00894 /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE37B802971F11900E00894 /* VKLoginWebView.swift */; };
+		8CE37B842971F7F300E00894 /* NetworkFriendsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE37B832971F7F200E00894 /* NetworkFriendsService.swift */; };
+		8CE37B872971F86700E00894 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8CE37B862971F86700E00894 /* PromiseKit */; };
+		8CE37B892971F9E800E00894 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE37B882971F9E800E00894 /* Api.swift */; };
+		8CE37B8D2971FBFB00E00894 /* FriendsParseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE37B8C2971FBFB00E00894 /* FriendsParseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,10 @@
 		8CA8515329170A4F0058EEB2 /* ListRowMaket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowMaket.swift; sourceTree = "<group>"; };
 		8CA8515529170D530058EEB2 /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
 		8CA8515F291AF82A0058EEB2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8CE37B802971F11900E00894 /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
+		8CE37B832971F7F200E00894 /* NetworkFriendsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFriendsService.swift; sourceTree = "<group>"; };
+		8CE37B882971F9E800E00894 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		8CE37B8C2971FBFB00E00894 /* FriendsParseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsParseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE37B872971F86700E00894 /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,19 +77,10 @@
 		8CA851432916EC380058EEB2 /* SwiftUICourse */ = {
 			isa = PBXGroup;
 			children = (
-				8CA851572917ADA60058EEB2 /* Views */,
-				8CA851582917ADBC0058EEB2 /* Presenter */,
-				8CA8515A2917ADFC0058EEB2 /* Entityes */,
 				8CA851442916EC380058EEB2 /* SwiftUICourseApp.swift */,
-				8C70B6902933F72800278ED9 /* TabBarView.swift */,
-				8CA8515F291AF82A0058EEB2 /* MainView.swift */,
-				8CA851462916EC380058EEB2 /* LoginScreen.swift */,
-				8C70B68A2933F15800278ED9 /* NewsfeedView.swift */,
-				8C70B68C2933F17000278ED9 /* FriendsView.swift */,
-				8C70B692293403FF00278ED9 /* FriendPhotoView.swift */,
-				8C70B68E2933F18400278ED9 /* GroupsView.swift */,
-				8CA8515329170A4F0058EEB2 /* ListRowMaket.swift */,
-				8CA8515529170D530058EEB2 /* FriendViewModel.swift */,
+				8CA851572917ADA60058EEB2 /* Views */,
+				8CA8515A2917ADFC0058EEB2 /* FriendViewModel */,
+				8CE37B822971F77600E00894 /* Service */,
 				8CA851482916EC3D0058EEB2 /* Assets.xcassets */,
 				8CA8514A2916EC3D0058EEB2 /* Preview Content */,
 			);
@@ -97,22 +98,51 @@
 		8CA851572917ADA60058EEB2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8CA8515F291AF82A0058EEB2 /* MainView.swift */,
+				8CE37B802971F11900E00894 /* VKLoginWebView.swift */,
+				8CA851462916EC380058EEB2 /* LoginScreen.swift */,
+				8C70B6902933F72800278ED9 /* TabBarView.swift */,
+				8C70B68E2933F18400278ED9 /* GroupsView.swift */,
+				8C70B68C2933F17000278ED9 /* FriendsView.swift */,
+				8C70B692293403FF00278ED9 /* FriendPhotoView.swift */,
+				8C70B68A2933F15800278ED9 /* NewsfeedView.swift */,
+				8CA8515329170A4F0058EEB2 /* ListRowMaket.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		8CA851582917ADBC0058EEB2 /* Presenter */ = {
+		8CA8515A2917ADFC0058EEB2 /* FriendViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8CA8515529170D530058EEB2 /* FriendViewModel.swift */,
 			);
-			path = Presenter;
+			path = FriendViewModel;
 			sourceTree = "<group>";
 		};
-		8CA8515A2917ADFC0058EEB2 /* Entityes */ = {
+		8CE37B822971F77600E00894 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8CE37B8A2971FBB400E00894 /* Api */,
+				8CE37B832971F7F200E00894 /* NetworkFriendsService.swift */,
 			);
-			path = Entityes;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8CE37B8A2971FBB400E00894 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				8CE37B882971F9E800E00894 /* Api.swift */,
+				8CE37B8B2971FBC200E00894 /* FriendsParseModel */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		8CE37B8B2971FBC200E00894 /* FriendsParseModel */ = {
+			isa = PBXGroup;
+			children = (
+				8CE37B8C2971FBFB00E00894 /* FriendsParseModel.swift */,
+			);
+			path = FriendsParseModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +161,9 @@
 			dependencies = (
 			);
 			name = SwiftUICourse;
+			packageProductDependencies = (
+				8CE37B862971F86700E00894 /* PromiseKit */,
+			);
 			productName = SwiftUICourse;
 			productReference = 8CA851412916EC380058EEB2 /* SwiftUICourse.app */;
 			productType = "com.apple.product-type.application";
@@ -159,6 +192,9 @@
 				Base,
 			);
 			mainGroup = 8CA851382916EC380058EEB2;
+			packageReferences = (
+				8CE37B852971F86700E00894 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+			);
 			productRefGroup = 8CA851422916EC380058EEB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,16 +221,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE37B842971F7F300E00894 /* NetworkFriendsService.swift in Sources */,
 				8C70B68D2933F17000278ED9 /* FriendsView.swift in Sources */,
 				8C70B6912933F72800278ED9 /* TabBarView.swift in Sources */,
+				8CE37B8D2971FBFB00E00894 /* FriendsParseModel.swift in Sources */,
 				8CA8515629170D530058EEB2 /* FriendViewModel.swift in Sources */,
 				8CA851472916EC380058EEB2 /* LoginScreen.swift in Sources */,
 				8CA851452916EC380058EEB2 /* SwiftUICourseApp.swift in Sources */,
+				8CE37B892971F9E800E00894 /* Api.swift in Sources */,
 				8CA85160291AF82A0058EEB2 /* MainView.swift in Sources */,
 				8CA8515429170A4F0058EEB2 /* ListRowMaket.swift in Sources */,
 				8C70B693293403FF00278ED9 /* FriendPhotoView.swift in Sources */,
 				8C70B68F2933F18400278ED9 /* GroupsView.swift in Sources */,
 				8C70B68B2933F15800278ED9 /* NewsfeedView.swift in Sources */,
+				8CE37B812971F11900E00894 /* VKLoginWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +437,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8CE37B852971F86700E00894 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
+			requirement = {
+				branch = v6;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8CE37B862971F86700E00894 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CE37B852971F86700E00894 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8CA851392916EC380058EEB2 /* Project object */;
 }

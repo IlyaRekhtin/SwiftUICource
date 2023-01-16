@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct FriendsView: View {
     @State private var friends: [FriendViewModel] = [
         FriendViewModel(id: 0, avatar: Image("ava1"), name: "Иван Фролов", city: "Москва"),
